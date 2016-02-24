@@ -2,7 +2,9 @@
 
 ### php
 
-1. [php计算工作日的类](php/Workday.php)
+1. [计算工作日的类](php/Workday.php)
+2. [友好的时间显示](php/ShowHumanTime.php)
+
 
 ### shell
 
