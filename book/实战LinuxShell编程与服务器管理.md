@@ -15,3 +15,5 @@
 
 cp /dev/null/ /var/log/nginx/access.log
 ```
+
+> 查看系统默认的shell环境:`echo $SHELL`
