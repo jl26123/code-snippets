@@ -120,3 +120,15 @@ echo 'This is Jack\'s book.'
 
 - $HOME/.bash_logout
 
+
+##### 执行新shell
+
+以交互方式的Shell
+
+- /etc/bash.bashrc
+- $HOME/.bashrc
+
+执行Shell Script
+
+- 读取检查BASN_ENV变量内容
+
