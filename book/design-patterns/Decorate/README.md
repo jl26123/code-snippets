@@ -1,3 +1,4 @@
+```php
 <?php
 /**
  * Index.php
@@ -27,3 +28,4 @@ $dom = (new StyleFontBolder())->decorate($dom);
 $dom = (new StyleFontSize())->decorate($dom);
 
 echo $dom->render();
+```
