@@ -81,9 +81,9 @@ echo 'This is Jack\'s book.'
 
 > 括号扩展
 
-括号扩展的符号为`{}`,含义是`{}`中的任意一项,他弥补了字符集合`[]`长度为1的不足
+括号扩展的符号为`{}`,含义是`{}`中的所有组合项,他弥补了字符集合`[]`长度为1的不足
 
-- `s{ab,cd}y` 显示saby或scdy
-- `*.{conf,cf,ini}` 查询指定的后缀名文件
-- `/bin/z{[ef]gre,cm}p` 查找bin目录下egrep,fgrep,cmp这三程序 
+- `echo s{ab,cd}y` 显示saby和scdy
+- `ls *.{conf,cf,ini}` 列出指定的后缀名文件
+- `ls /bin/z{[ef]gre,cm}p` 查找bin目录下egrep,fgrep,cmp这三程序 
 - `echo {1,2,3,4,5,6,7,8,9}\*{1,2,3,4,5,6,7,8,9}` 打印九九乘法表
