@@ -7,3 +7,11 @@
 出版社:电子工业出版社
 
 ----- 
+
+> 当服务器日志文件很大时,利用特殊文件/dev/null(只写文件)来清理:
+
+```bash
+#!/bin/bash
+
+cp /dev/null/ /var/log/nginx/access.log
+```
