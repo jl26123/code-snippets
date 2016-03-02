@@ -56,3 +56,13 @@ cp /dev/null/ /var/log/nginx/access.log
 |c|字符设备文件|
 |s|Socket文件|
 |p|连接文件|
+
+> 关于转义字符:单引号中,不可以出现单引号,就算用转移字符\'也不行
+
+```bash
+#!/bin/bash
+
+#以下bash会提示命令尚未输入完
+echo 'This is Jack\'s book.'
+```
+
