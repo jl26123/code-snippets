@@ -87,3 +87,36 @@ echo 'This is Jack\'s book.'
 - `ls *.{conf,cf,ini}` 列出指定的后缀名文件
 - `ls /bin/z{[ef]gre,cm}p` 查找bin目录下egrep,fgrep,cmp这三程序 
 - `echo {1,2,3,4,5,6,7,8,9}\*{1,2,3,4,5,6,7,8,9}` 打印九九乘法表
+
+> 父Shell与子Shell
+
+在执行Shell Script之前,我们已经处于login shell之中,称之为父Shell,当我们执行某个Shell Script时,父Shell会根据Script程序的第一行`#!`之后所指定的Shell程序开启一个子Shell的环境,然后在子Shell中执行此Shell脚本,一但子Shell执行完毕,此子Shell随即结束,返回父Shell之中,不会影响父Shell原本的环境
+
+使用`.`或者`source`会让Script只在父Shell的环境中执行,子shell的执行结果,会影响父Shell的环境,通常在做系统调校时,才会如此运用
+
+命令`echo $SHLVL`可以查看当前终端程序在第几层执行
+
+
+> Bash的运行模式及启动配置文件
+
+- 互动模式,终端读取键盘命令,一条一条的执行
+- 非互动模式,是指执行一个Script程序
+- 以sh名称调用
+- POSIX模式
+- 限制功能模式
+
+在不同的运行模式中,Bash调用不同的启动配置文件,Bash启动配置文件,主要与Shell的环境设定有关,以下详细描述不同模式下的配置文件读取过程
+
+##### 登录(login)
+
+按加载顺序依次排列
+
+- /etc/profile
+- $HOME/.bash_profile
+- $HOME/.bash_login
+- $HOME/.profile
+
+##### 注销(logout)
+
+- $HOME/.bash_logout
+
