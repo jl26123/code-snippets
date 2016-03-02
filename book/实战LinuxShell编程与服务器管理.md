@@ -8,6 +8,17 @@
 
 ----- 
 
+> 查询操作系统的shell环境与版本
+
+```bash
+
+#查看bash默认类型
+echo $SHELL
+
+#查看版本号
+echo $BASH_VERSION
+```
+
 > 当服务器日志文件很大时,利用特殊文件/dev/null(只写文件)来清理:
 
 ```bash
@@ -15,5 +26,3 @@
 
 cp /dev/null/ /var/log/nginx/access.log
 ```
-
-> 查看系统默认的shell环境:`echo $SHELL`
